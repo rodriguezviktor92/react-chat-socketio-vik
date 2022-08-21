@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "node server/index.js",
-    "dev": "nodemon server/index.js"
+    "dev": "nodemon server/index.js",
+    "build": "npm run --prefix client build"
   },
-  "author": "",
+  "author": "Victor Rodriguez",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.19"
