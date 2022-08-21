@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
-    "build": "npm--prefix client install && npm run --prefix client build"
+    "build": "npm --prefix client install && npm run --prefix client build"
   },
   "author": "Victor Rodriguez",
   "license": "ISC",
