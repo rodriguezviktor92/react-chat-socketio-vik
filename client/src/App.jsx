@@ -31,7 +31,6 @@ function App() {
 
   useEffect(() => {
     const receiverMessage = (message) => {
-      console.log(message);
       setMessages([...messages, message]);
     };
 

@@ -13,7 +13,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const server = http.createServer(app);
 new SocketServer(server);
 const io = new SocketServer(server, {
-  cors: {},
+  cors: {
+    //Local
+    //origin: 'http://localhost:5173',
+  },
 });
 
 app.use(cors());
@@ -30,16 +33,13 @@ const createUser = (userId) => {
 
 const getUser = (userId) => {
   const user = users.find((user) => user.id === userId);
-  console.log(user);
   return user;
 };
 
 io.on('connection', (socket) => {
   createUser(socket.id);
-  console.log(users);
 
   socket.on('message', (message) => {
-    console.log(message);
     socket.broadcast.emit('message', {
       body: message,
       from: getUser(socket.id),
