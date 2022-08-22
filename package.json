@@ -1,9 +1,6 @@
 {
   "name": "react-chat-sockets",
   "version": "1.0.0",
-  "engines": {
-    "node": "18.x"
-  },
   "description": "Chast with react and sockets",
   "main": "index.js",
   "type": "module",
