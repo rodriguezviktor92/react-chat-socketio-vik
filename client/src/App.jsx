@@ -5,7 +5,11 @@ import { Header } from './components/header';
 import { Footer } from './components/footer';
 import { Chat } from './components/chat';
 
-const socket = io('http://localhost:4000');
+//Local
+//const socket = io('http://localhost:4000');
+
+//Remote
+const socket = io();
 
 function App() {
   const [message, setMessage] = useState('');

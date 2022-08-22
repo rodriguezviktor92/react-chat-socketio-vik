@@ -13,9 +13,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const server = http.createServer(app);
 new SocketServer(server);
 const io = new SocketServer(server, {
-  cors: {
-    origin: 'http://localhost:5173',
-  },
+  cors: {},
 });
 
 app.use(cors());
